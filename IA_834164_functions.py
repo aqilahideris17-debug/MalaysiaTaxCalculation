@@ -32,13 +32,15 @@ def verify_user(ic_number, password): #Verify user's and check IC number 12 digi
 def calculate_tax(income, tax_relief): #Calculate tax payable based on Malaysian tax rates for current year (2024)
     taxable_income = income - tax_relief
 
-    if taxable_income <= 5000:
+    tax_brackets = (5000, 20000, 35000, 50000)
+
+    if taxable_income <= tax_brackets[0]:
         return 0
-    elif taxable_income <= 20000:
+    elif taxable_income <= tax_brackets[1]:
         tax = taxable_income * 0.01
-    elif taxable_income <= 35000:
+    elif taxable_income <= tax_brackets[2]:
         tax = 150 + (taxable_income - 20000) * 0.03
-    elif taxable_income <= 50000:
+    elif taxable_income <= tax_brackets[3]:
         tax = 600 + (taxable_income - 35000) * 0.06
     else:
         tax = 1500 + (taxable_income - 50000) * 0.11
