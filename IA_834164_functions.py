@@ -1,6 +1,7 @@
 
 import pandas as pd
 import os
+import csv
 
 #--------------------------------------------------------Registration Function-------------------------------------------------------
 def register_user(user_id, ic_number, filename = "Registered_Users.csv"): #Register new user by saving ID and IC number to a CSV file
@@ -59,3 +60,4 @@ def file_read_from_csv(filename = "Record_Tax.csv"): #Read data from existing fi
         return pd.read_csv(filename)
     else:
         return None
+
