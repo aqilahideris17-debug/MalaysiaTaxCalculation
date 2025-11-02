@@ -12,7 +12,7 @@ def main():
 
         choice = input("Select an option (1/2/3) : ").strip()
 
-        #---------------------------------------------------Register New User --------------------------------------------------------
+        #---------------------------------------------------Register New User ---------------------------------------------------------
         if choice == '2':
             print("\n--- User Registration ---")
             user_id = input("Enter a new User ID : ").strip()
@@ -108,3 +108,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
